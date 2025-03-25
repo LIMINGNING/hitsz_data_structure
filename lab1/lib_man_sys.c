@@ -79,7 +79,7 @@ int DeleteBook(Node **head, char bookId[]) {
     }
 }
 
-/*  */
+/* Update the stock of books. */
 int UpdateStock(Node *head, char bookId[], int newStock) {
     for (Node *p = head; p->next != NULL; p = p->next) {
         if (strcmp(p->book.bookId,bookId) == 0) {
