@@ -40,14 +40,10 @@ void DestroyList(SqList *L) {
     L->listsize = 0;
 }
 
-/*
- * Flip cards based on the given factor k:
- * For each multiple of k, flip the card at that index (1 -> 0 or 0 -> 1).
- */
+/* Flip cards based on the given factor k. */
 void FlipCards(SqList *L, int k) {
-    /* Note: Card indices start from 1, but array indices start from 0 */
     for (int i = k; i < L->listsize; i += k) {
-        L->elem[i] = 1 - L->elem[i];  /* Flip the card: 0 -> 1 or 1 -> 0 */
+        L->elem[i] = 1 - L->elem[i];  /* Flip the card: 0 -> 1 or 1 -> 0. */
     }
 }
 
@@ -58,7 +54,7 @@ void FlipCards(SqList *L, int k) {
 void PrintFaceUpCards(SqList *L) {
     for (int i = 1; i < L->listsize; i++) {
         if (L->elem[i] == 1) {
-            printf("%d ", i);  /* Print the card number (i+1) */
+            printf("%d ", i);  /* Print the card number i. */
         }
     }
     printf("\n");
@@ -68,7 +64,7 @@ int main() {
     int n;
     scanf("%d", &n);   /* Read the total number of cards, e.g., 52 */
     
-    /* Initialize the list and set all cards to face up */
+    /* Initialize the list and set all cards to face up. */
     SqList list;
     InitList(&list, n);
 
@@ -80,10 +76,10 @@ int main() {
         FlipCards(&list, k);
     }
 
-    /* Print all face-up cards' numbers */
+    /* Print all face-up cards' numbers. */
     PrintFaceUpCards(&list);
 
-    /* Free the dynamically allocated memory */
+    /* Free the dynamically allocated memory. */
     DestroyList(&list);
 
     return 0;
