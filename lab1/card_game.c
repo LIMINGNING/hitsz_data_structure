@@ -52,12 +52,15 @@ void FlipCards(SqList *L, int k) {
  * Output the card numbers that are face up, separated by spaces.
  */
 void PrintFaceUpCards(SqList *L) {
+    int sum = 0;
     for (int i = 1; i < L->listsize; i++) {
         if (L->elem[i] == 1) {
             printf("%d ", i);  /* Print the card number i. */
+            sum += 1;
         }
     }
     printf("\n");
+    printf("%d",sum);
 }
 
 int main() {
