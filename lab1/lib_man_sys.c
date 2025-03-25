@@ -4,10 +4,10 @@
 
 /* Define the book structure. */
 typedef struct {
-    char bookId[20]; // 书号
-    char title[100]; // 书名
-    char author[50]; // 作者
-    int stock;       // 库存数量
+    char bookId[20]; /* Book's ID */
+    char title[100]; /* Name of the books. */
+    char author[50]; /* Author. */
+    int stock;       /* Stock of the books. */
 } Book;
 
 /* Define the linked list node structure. */
