@@ -61,8 +61,8 @@ int peek(Stack *s) {
 /* Define the queue structure. */
 typedef struct {
     int data[MAX_SIZE];
-    int front;  /* Head is data[front]. */
-    int rear;   /* Tail is data[rear-1]. */
+    int front; /* Head is data[front]. */
+    int rear;  /* Tail is data[rear-1]. */
 } Queue;
 
 /* Initialize the queue. */

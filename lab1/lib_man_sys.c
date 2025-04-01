@@ -27,11 +27,11 @@ Node* CreateNode(Book book) {
 /* Insert book information at the end of the linked list. */
 void InsertBook(Node **head, Book book) {
     Node *last = CreateNode(book);
-    if (*head == NULL) {  /* Easy to make mistake. */
+    if (*head == NULL) { /* Easy to make mistake. */
         *head = last;
     }
     else {
-        Node *temp = *head;  /* Temp points to head node. */
+        Node *temp = *head; /* Temp points to head node. */
         while(temp->next != NULL) {
             temp = temp->next;
         }
@@ -42,27 +42,27 @@ void InsertBook(Node **head, Book book) {
 
 /* Delete book information according to ISBN number. */
 int DeleteBook(Node **head, char bookId[]) {
-    Node *p = *head;  /* p points to head node. */
+    Node *p = *head; /* p points to head node. */
     if (*head == NULL) {
         return 1;
     }
     else {
-        if (strcmp(p->book.bookId,bookId) == 0) {  /* Delete head node. */
+        if (strcmp(p->book.bookId,bookId) == 0) { /* Delete head node. */
             *head = (*head)->next;
             free(p);
             return 0;
         }
         else {
-            Node *pr = *head;  /* pr points to head node. */
-            p = p->next;  /* p points to the next node of the head node. */
+            Node *pr = *head; /* pr points to head node. */
+            p = p->next; /* p points to the next node of the head node. */
 
-            if (strcmp(p->book.bookId,bookId) == 0) {  /* Check if the second node needs to be deleted. */
+            if (strcmp(p->book.bookId,bookId) == 0) { /* Check if the second node needs to be deleted. */
                 pr->next = p->next;
                 free(p);
                 return 0;
             }
 
-            while (strcmp(p->book.bookId,bookId) != 0) {  /* Check the remaining. */
+            while (strcmp(p->book.bookId,bookId) != 0) { /* Check the remaining. */
                 if (p->next == NULL) {
                     return 0;
                 }

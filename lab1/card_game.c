@@ -4,10 +4,10 @@
 typedef int ElemType;
 
 typedef struct {
-    ElemType *elem;    /* Base address of the space, the space stores the card's front and back status values, 
-                          with 1 representing the front and 0 representing the back. */
-    int length;        /* Stores the number of cards. */
-    int listsize;      /* Stores the capacity of the space. */
+    ElemType *elem; /* Base address of the space, the space stores the card's front and back status values, 
+                       with 1 representing the front and 0 representing the back. */
+    int length;     /* Stores the number of cards. */
+    int listsize;   /* Stores the capacity of the space. */
 } SqList;
 
 /* 
@@ -23,7 +23,7 @@ void InitList(SqList *L, int n) {
         exit(-1);
     }
     for (int i = 1; i < n + 1; i++) {
-        L->elem[i] = 1;  /* All cards are initially face up */
+        L->elem[i] = 1; /* All cards are initially face up */
     }
 }
 
@@ -43,7 +43,7 @@ void DestroyList(SqList *L) {
 /* Flip cards based on the given factor k. */
 void FlipCards(SqList *L, int k) {
     for (int i = k; i < L->listsize; i += k) {
-        L->elem[i] = 1 - L->elem[i];  /* Flip the card: 0 -> 1 or 1 -> 0. */
+        L->elem[i] = 1 - L->elem[i]; /* Flip the card: 0 -> 1 or 1 -> 0. */
     }
 }
 
@@ -55,7 +55,7 @@ void PrintFaceUpCards(SqList *L) {
     int sum = 0;
     for (int i = 1; i < L->listsize; i++) {
         if (L->elem[i] == 1) {
-            printf("%d ", i);  /* Print the card number i. */
+            printf("%d ", i); /* Print the card number i. */
             sum += 1;
         }
     }
@@ -65,7 +65,7 @@ void PrintFaceUpCards(SqList *L) {
 
 int main() {
     int n;
-    scanf("%d", &n);   /* Read the total number of cards, e.g., 52 */
+    scanf("%d", &n); /* Read the total number of cards, e.g., 52 */
     
     /* Initialize the list and set all cards to face up. */
     SqList list;
