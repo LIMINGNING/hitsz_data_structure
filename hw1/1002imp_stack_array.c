@@ -79,7 +79,7 @@ int GetTop(Stack S, DataType *e)
 
 /**
  * Check if the stack is empty, return 1 if it is empty, otherwise return 0.
- * @param S Opeatation stack.
+ * @param S Operation stack.
  * @return  1 for empty, 0 for other.
  */
 int StackEmpty(Stack S)
