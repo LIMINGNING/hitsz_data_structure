@@ -1,11 +1,12 @@
 CC = gcc
 CFLAGS = -std=c99
 
-5003insert:5003insert_ord_arr.c
+7003det_substring:7003det_substring.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-run:5003insert_ord_arr
-	./5003insert_ord_arr
+run:7003det_substring
+	./7003det_substring
 
 clean:
-	rm -f 5003insert_ord_arr
+	rm -f 7003det_substring
+	rm -r *.dSYM
