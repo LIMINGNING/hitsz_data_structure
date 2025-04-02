@@ -1,11 +1,12 @@
 CC = gcc
 CFLAGS = -std=c99
 
-6001par_match:6001par_match.c
+7003det_substring:7003det_substring.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-run:6001par_match
-	./6001par_match
+run:7003det_substring
+	./7003det_substring
 
 clean:
-	rm -f 6001par_match
+	rm -f 7003det_substring
+	rm -r *.dSYM
