@@ -28,7 +28,7 @@ typedef struct queue
 
 
 /**
- * 初始化一个栈
+ * Initialize a stack.
  * @param s
  */
 void InitStack(Stack *s)
@@ -38,10 +38,10 @@ void InitStack(Stack *s)
 }
 
 /**
- * 向栈插入一个元素
- * @param s 操作栈
- * @param e 操作数
- * @return 成功返回1，否则返回0
+ * Insert an element to stack.
+ * @param s Operation stack.
+ * @param e Element to be insert.
+ * @return 1 success, 0 fail.
  */
 int Push(Stack *s, DataType e)
 {
@@ -55,10 +55,10 @@ int Push(Stack *s, DataType e)
 }
 
 /**
- * 从栈中弹出一个元素
- * @param s 操作栈
- * @param e 接受栈弹出的值
- * @return 成功返回1，否则返回0
+ * Pop out an element from stack.
+ * @param s Operation stack.
+ * @param e Accept the element.
+ * @return 1 success, 0 fail.
  */
 int Pop(Stack *s, DataType *e)
 {
@@ -72,10 +72,10 @@ int Pop(Stack *s, DataType *e)
 }
 
 /**
- * 获取栈顶元素，不删除该元素
- * @param s 操作栈
- * @param e 接受栈顶元素
- * @return 成功返回1，否则返回0
+ * Get the top element of Stack without deleting it.
+ * @param s Operation stack.
+ * @param e Accept element from top of stack.
+ * @return 1 success, 0 fail.
  */
 int GetTop(Stack s, DataType *e)
 {
@@ -89,7 +89,7 @@ int GetTop(Stack s, DataType *e)
 }
 
 /**
- * 判断栈是否空，为空返回1，否则返回0
+ * Check if stack is empty.
  * @param s
  * @return
  */
@@ -104,9 +104,9 @@ int StackEmpty(Stack s)
 }
 
 /**
- * 获取栈的一个数组拷贝
- * @param s 操作栈
- * @param seq 栈中元素的一个拷贝
+ * Get an array copy of stack.
+ * @param s Operation stack.
+ * @param seq A copy of element in stack.
  */
 void StackToArray(Stack s, DataType *seq)
 {
@@ -119,9 +119,9 @@ void StackToArray(Stack s, DataType *seq)
 }
 
 /**
- * 返回栈已使用长度
- * @param s 操作栈
- * @return 返回栈的长度
+ * Return the length of stack has used.
+ * @param s Operation stack.
+ * @return Return length of stack.
  */
 int StackLength(Stack s)
 {
@@ -129,8 +129,8 @@ int StackLength(Stack s)
 }
 
 /**
- * 初始化队列
- * @param q 操作队列
+ * Initialize queue.
+ * @param q Operation queue.
  */
 void InitQueue(Queue *q)
 {
@@ -142,10 +142,10 @@ void InitQueue(Queue *q)
 }
 
 /**
- * 获取队列头（不删除元素）
- * @param q 操作队列
- * @param e 接受队列头元素
- * @return 如果成功获取返回1，否则返回0
+ * Get head element of queue without deleting it.
+ * @param q Operation queue.
+ * @param e Accept head element of queue.
+ * @return 1 success, 0 fail.
  */
 int GetHead(Queue q, DataType *e)
 {
@@ -168,9 +168,9 @@ int GetHead(Queue q, DataType *e)
 }
 
 /**
- * 判断队列是否为空
- * @param q 操作队列
- * @return 如果为空返回1，否则返回0
+ * Check if queue is empty.
+ * @param q Operation queue.
+ * @return 1 success, 0 fail.
  */
 int QueueEmpty(Queue q)
 {
@@ -188,9 +188,9 @@ int QueueEmpty(Queue q)
  * In fact, the size of the seq array used later is the same as the size of the stack.
  * In this case, the distinction between true full and false full is meaningless,
  * as it will always cause an array overflow when accessing seq. 
- * @param q 操作队列
- * @param e 插入的元素
- * @return 如果插入成功返回1，否则返回0
+ * @param q Operation queue.
+ * @param e Element to be insert.
+ * @return 1 success, 0 fail.
  */
 int EnQueue(Queue *q, DataType e)
 {
@@ -213,10 +213,10 @@ int EnQueue(Queue *q, DataType e)
 }
 
 /**
- * 出队操作，从队列中取出一个元素
- * @param q 操作队列
- * @param e 接受出队元素
- * @return 如果成功取出返回1，否则返回0
+ * Get an element from queue and delete it.
+ * @param q Operation queue.
+ * @param e Accept element from queue.
+ * @return 1 success, 0 fail.
  */
 int DeQueue(Queue *q, DataType *e)
 {
@@ -239,7 +239,7 @@ int DeQueue(Queue *q, DataType *e)
 }
 
 /**
- * 清空队列 操作队列
+ * Clear queue.
  * @param Q
  */
 void ClearQueue(Queue *Q)
@@ -250,9 +250,9 @@ void ClearQueue(Queue *Q)
 }
 
 /**
- *
- * @param Q 操作队列
- * @return 返回队列已使用长度
+ * Return length of queue has used.
+ * @param Q Operation queue.
+ * @return Return length.
  */
 int QueueLength(Queue Q)
 {
@@ -260,9 +260,9 @@ int QueueLength(Queue Q)
 }
 
 /**
- * 获取队列的一个数组拷贝
- * @param q 操作队列
- * @param seq 栈中元素的一个拷贝
+ * Get an copy array of queue.
+ * @param q Operation queue.
+ * @param seq A copy of element in queue.
  */
 void QueueToArray(Queue q, DataType *seq)
 {

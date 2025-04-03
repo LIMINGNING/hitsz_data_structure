@@ -1,12 +1,12 @@
 CC = gcc
 CFLAGS = -std=c99
 
-7003det_substring:7003det_substring.c
+imp_que_by_stack:imp_que_by_stack.c
 	$(CC) $(CFLAGS) -o $@ $^
 
-run:7003det_substring
-	./7003det_substring
+run:imp_que_by_stack
+	./imp_que_by_stack
 
 clean:
-	rm -f 7003det_substring
+	rm -f imp_que_by_stack
 	rm -r *.dSYM
