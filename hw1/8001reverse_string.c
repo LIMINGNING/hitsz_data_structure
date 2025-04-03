@@ -71,7 +71,7 @@ void pop(Stack *s, char *c) {
     return ;
 }
 
-void inQueue(Queue *q, char c) {
+void deQueue(Queue *q, char c) {
     q->str[++(q->front)] = c;
     return ;
 }
@@ -87,11 +87,11 @@ void clear(Stack *s, Queue *qTemp, Queue *q) {
     char temp;
     while (!isStackEmpty(*s)) {
         pop(s,&temp);
-        inQueue(q,temp);
+        deQueue(q,temp);
     }
     while (!isQueueEmpty(*qTemp)) {
         deQueue(qTemp,&temp);
-        inQueue(q,temp);
+        deQueue(q,temp);
     }
     return ;
 }
@@ -133,7 +133,7 @@ void reverseString() {
             }
         }
         else if (isStackFull(s,n) && !isQueueFull(qTemp,n)) {
-            inQueue(&qTemp,str[i]);
+            deQueue(&qTemp,str[i]);
             if (i == len - 1) {
                 clear(&s,&qTemp,&q);
             }
