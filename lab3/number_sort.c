@@ -15,11 +15,6 @@ void sortJumbled(int *mapping, int *nums, int numsSize) {
     for (int i = 0; i < numsSize; i++) {
         pairs[i].original = nums[i];
 
-        if (nums[i] == 0) {
-            pairs[i].mapped = mapping[0];
-            continue;
-        }
-
         char numStr[20];
         sprintf(numStr,"%d",nums[i]);
 
